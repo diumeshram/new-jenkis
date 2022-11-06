@@ -1,0 +1,13 @@
+---
+- name: my first playbook
+  hosts: all
+  vars:
+    a: hello worold, welcome to plamet earth
+    b: welcome to cloudblitz
+  tasks:
+    - name: task_1
+      debug:
+        msg: "{{a}}"
+    - name: task_2
+      debug:
+        msg: "{{b}}"
