@@ -1,12 +1,13 @@
 ---
--name: loop
- hosts: all
- tasks:
-   - name: aws service list
-     debug:
-     msg: "{{item}}"
-     loop:
-        - IAM
-        - VPC
-        - EC2
-        - S3
+- name: my first playbook
+  hosts: all
+  vars:
+    a: hello worold, welcome to plamet earth
+    b: welcome to cloudblitz
+  tasks:
+    - name: task_1
+      debug:
+        msg: "{{a}}"
+    - name: task_2
+      debug:
+        msg: "{{b}}"
