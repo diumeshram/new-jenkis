@@ -1,0 +1,12 @@
+---
+-name: loop
+ hosts: all
+ tasks:
+   - name: aws service list
+     debug:
+     msg: "{{item}}"
+     loop:
+        - IAM
+        - VPC
+        - EC2
+        - S3
